@@ -5,6 +5,8 @@ NORTH = 'n'
 EAST = 'e'
 SOUTH = 's'
 WEST = 'w'
+YES = "y"
+NO = "n"
 
 def move(direction, col, row):
     ''' Returns updated col, row given the direction '''
@@ -85,7 +87,7 @@ def lever(col,row):
         #question = input("Pull a lever (y/n): ")
         pull_lever = random.choice([YES, NO])
         print("pull a lever (y/n): ", pull_lever)
-        if question == "y" or question == "Y":
+        if pull_lever == "y":
             return 1
     return 0
 
