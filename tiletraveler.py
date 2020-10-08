@@ -78,7 +78,7 @@ def lever(col,row):
         question = input("Pull a lever (y/n): ")
         if question == "y" or question == "Y":
             total = total + 1
-            print("You received 1 coin, your total is now {}".format(total))
+            print("You received 1 coin, your total is now {}.".format(total))
         else:
             total = total + 0
     return total 
