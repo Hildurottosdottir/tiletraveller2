@@ -73,14 +73,15 @@ def play_one_move(col, row, valid_directions):
     return victory, col, row
 
 def lever(col,row):
+    total = 0
     if (col,row) in [(1,2), (2,2), (2,3), (3,2)]:
         question = input("Pull a lever (y/n): ")
         if question == "y" or question == "Y":
-            total += 1
-            print("You received 1 coin, your total is now {}".format(total))
+            total = total + 1
+            print("You recieved 1 coin, your total is now {}.".format(total))
         else:
             total = total + 0
-    return total 
+    return total
 
 
 # The main program starts here
