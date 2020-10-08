@@ -80,12 +80,13 @@ def lever(total):
     if question == "y" or question == "Y":
         total = total + 1
         print("You received 1 coin, your total is now {}.".format(total))
-        return total 
+    return total 
 
 # The main program starts here
 victory = False
 row = 1
 col = 1
+total = 0
 
 while not victory:
     valid_directions = find_directions(col, row)
