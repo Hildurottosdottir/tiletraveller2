@@ -68,15 +68,19 @@ def play_one_move(col, row, valid_directions):
         print("Not a valid direction!")
     else:
         col, row = move(direction, col, row)
-        victory = is_victory(col, row)
+        victory = is_victory(col,row)
+        coins = lever(col, row)
     return victory, col, row
 
-def lever(total):
-    question = input("Pull a lever (y/n): ")
-    if question == "y" or question == "Y":
-        total = total + 1
-        print("You received 1 coin, your total is now {}.".format(total))
+def lever(col,row):
+    if (col,row) in [(1,2), (2,2), (2,3), (3,2)]:
+        question = input("Pull a lever (y/n): ")
+        if question == "y" or question == "Y":
+            total = 1
+        else:
+            total = 0
     return total 
+
 
 # The main program starts here
 victory = False
