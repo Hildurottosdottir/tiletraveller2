@@ -86,7 +86,6 @@ def lever(col,row):
 victory = False
 row = 1
 col = 1
-total = 0
 
 while not victory:
     valid_directions = find_directions(col, row)
