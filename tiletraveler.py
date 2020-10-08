@@ -1,3 +1,5 @@
+import random
+
 # Constants
 NORTH = 'n'
 EAST = 'e'
