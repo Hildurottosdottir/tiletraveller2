@@ -97,6 +97,6 @@ while not victory:
         print("Victory! Total coins {}.".format(total))
         play_again = input("Play again (y/n): ")
         if play_again == "y" or play_again == "Y":
-            continue
+            pass
         else:
-            break
+            return
