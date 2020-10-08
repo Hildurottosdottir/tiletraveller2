@@ -72,7 +72,7 @@ def play_one_move(col, row, valid_directions, total):
         coins = lever(col, row)
         total += coins
         if coins > 0:
-            print("You recieved 1 coin, your total is now {}.".format(total))
+            print("You received 1 coin, your total is now {}.".format(total))
     return victory, col, row, total
 
 def lever(col,row):
