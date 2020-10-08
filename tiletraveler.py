@@ -62,9 +62,12 @@ def find_directions(col, row):
 def play_one_move(col, row, valid_directions, total):
     ''' Plays one move of the game
         Return if victory has been obtained and updated col,row '''
+    options = ["n","s","w","e"]
     victory = False
-    direction = input("Direction: ")
-    direction = direction.lower()
+    #direction = input("Direction: ")
+    #direction = direction.lower()
+    direction = random.choice(options)
+    print("Direction: ", direction)
     
     if not direction in valid_directions:
         print("Not a valid direction!")
@@ -79,13 +82,16 @@ def play_one_move(col, row, valid_directions, total):
 
 def lever(col,row):
     if (col,row) in [(1,2), (2,2), (2,3), (3,2)]:
-        question = input("Pull a lever (y/n): ")
+        #question = input("Pull a lever (y/n): ")
+        pull_lever = random.choice([YES, NO])
+        print("pull a lever (y/n): ", pull_lever)
         if question == "y" or question == "Y":
             return 1
     return 0
 
 
 # The main program starts here
+random.seed(int(input("Input seed: ")))
 victory = False
 play = True
 
