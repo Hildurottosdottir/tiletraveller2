@@ -42,20 +42,16 @@ def find_directions(col, row):
     if col == 1 and row == 1:   # (1,1)
         valid_directions = NORTH
     elif col == 1 and row == 2: # (1,2)
-        total = lever(total)
         valid_directions = NORTH+EAST+SOUTH
     elif col == 1 and row == 3: # (1,3)
         valid_directions = EAST+SOUTH
     elif col == 2 and row == 1: # (2,1)
         valid_directions = NORTH
     elif col == 2 and row == 2: # (2,2)
-        total = lever(total)
         valid_directions = SOUTH+WEST
     elif col == 2 and row == 3: # (2,3)
-        total = lever(total)
         valid_directions = EAST+WEST
     elif col == 3 and row == 2: # (3,2)
-        total = lever(total)
         valid_directions = NORTH+SOUTH
     elif col == 3 and row == 3: # (3,3)
         valid_directions = SOUTH+WEST
