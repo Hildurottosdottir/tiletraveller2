@@ -5,8 +5,6 @@ NORTH = 'n'
 EAST = 'e'
 SOUTH = 's'
 WEST = 'w'
-YES = "y"
-NO = "n"
 
 def move(direction, col, row):
     ''' Returns updated col, row given the direction '''
@@ -64,11 +62,10 @@ def find_directions(col, row):
 def play_one_move(col, row, valid_directions, total, move_count):
     ''' Plays one move of the game
         Return if victory has been obtained and updated col,row '''
-    options = ["n","s","w","e"]
+    options = ["n","e","s","w"]
     victory = False
-    #direction = input("Direction: ")
-    #direction = direction.lower()
     direction = random.choice(options)
+    direction = direction.lower()
     print("Direction:", direction)
     move_count += 1
     if not direction in valid_directions:
@@ -85,7 +82,7 @@ def play_one_move(col, row, valid_directions, total, move_count):
 def lever(col,row):
     if (col,row) in [(1,2), (2,2), (2,3), (3,2)]:
         #question = input("Pull a lever (y/n): ")
-        pull_lever = random.choice([YES, NO])
+        pull_lever = random.choice(["y", "n"])
         print("Pull a lever (y/n): ", pull_lever)
         if pull_lever == "y":
             return 1
